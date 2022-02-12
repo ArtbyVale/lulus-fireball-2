@@ -203,6 +203,7 @@ for (let value of tiles.getTilesByType(assets.tile`tile4`)) {
     tiles.setTileAt(value, assets.tile`transparency16`)
     game.splash("testtesttest")
     music.playMelody("C5 C5 B B A A G G ", 120)
+    game.splash("dannazione...")
 }
 game.onUpdateInterval(1000, function () {
     palla_di_fuoco_4 = sprites.createProjectileFromSide(img`
