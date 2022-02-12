@@ -26,10 +26,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Princess, function (sprite, othe
     game.over(true, effects.confetti)
 })
 let palla_di_fuoco_3: Sprite = null
-let palla_di_fuoco_6: Sprite = null
 let palla_di_fuoco_2: Sprite = null
-let palla_di_fuoco_5: Sprite = null
+let palla_di_fuoco_6: Sprite = null
 let palla_di_fuoco: Sprite = null
+let palla_di_fuoco_5: Sprite = null
 let palla_di_fuoco_4: Sprite = null
 let mySprite2: Sprite = null
 let destra = false
@@ -224,10 +224,6 @@ game.onUpdateInterval(1000, function () {
     tiles.placeOnTile(palla_di_fuoco_4, tiles.getTileLocation(29, 18))
 })
 game.onUpdateInterval(1000, function () {
-    palla_di_fuoco = sprites.createProjectileFromSide(assets.image`palla di fuoco`, 75, 0)
-    tiles.placeOnTile(palla_di_fuoco, tiles.getTileLocation(0, 13))
-})
-game.onUpdateInterval(1000, function () {
     palla_di_fuoco_5 = sprites.createProjectileFromSide(img`
         . . . . 8 8 8 8 8 8 . . . . . . . . . . 
         . . . 8 9 9 9 1 6 6 8 . . 8 . . . . . . 
@@ -247,23 +243,8 @@ game.onUpdateInterval(1000, function () {
     tiles.placeOnTile(palla_di_fuoco_5, tiles.getTileLocation(29, 27))
 })
 game.onUpdateInterval(1000, function () {
-    palla_di_fuoco_2 = sprites.createProjectileFromSide(img`
-        . . . . . . . . . . 8 8 8 8 8 8 . . . . 
-        . . . . . . 8 . . 8 6 6 1 9 9 9 8 . . . 
-        . . . . . . . 8 8 8 6 9 9 1 1 9 9 8 . . 
-        . . 8 . 8 8 8 6 8 6 6 9 9 9 1 1 9 8 8 . 
-        . . . . . . 8 8 6 9 9 9 9 9 9 1 1 9 9 8 
-        . . . . 8 8 9 8 6 9 9 9 9 9 9 1 1 1 9 8 
-        8 8 8 8 8 6 6 8 6 6 9 9 9 9 9 9 1 1 9 8 
-        . . . 8 6 9 9 8 1 6 9 9 9 9 9 9 1 1 9 8 
-        . 8 8 8 8 6 8 8 1 6 6 9 9 9 9 1 1 9 9 8 
-        . . . . . 8 6 9 8 1 6 6 9 9 1 1 9 1 8 . 
-        . . . 8 8 6 8 8 6 8 6 9 6 6 6 1 1 8 . . 
-        . . . . . . 6 6 8 8 8 6 1 6 1 6 8 . . . 
-        . . 8 . 8 8 . 8 6 8 8 8 8 8 8 8 8 . . . 
-        . . . . . . 8 . . . 8 . 8 8 8 . . . . . 
-        `, 75, 0)
-    tiles.placeOnTile(palla_di_fuoco_2, tiles.getTileLocation(0, 23))
+    palla_di_fuoco = sprites.createProjectileFromSide(assets.image`palla di fuoco`, 75, 0)
+    tiles.placeOnTile(palla_di_fuoco, tiles.getTileLocation(0, 13))
 })
 game.onUpdateInterval(1000, function () {
     palla_di_fuoco_6 = sprites.createProjectileFromSide(img`
@@ -283,6 +264,25 @@ game.onUpdateInterval(1000, function () {
         . . . . . 8 8 8 . 8 . . . 8 . . . . . . 
         `, -75, 0)
     tiles.placeOnTile(palla_di_fuoco_6, tiles.getTileLocation(29, 8))
+})
+game.onUpdateInterval(1000, function () {
+    palla_di_fuoco_2 = sprites.createProjectileFromSide(img`
+        . . . . . . . . . . 8 8 8 8 8 8 . . . . 
+        . . . . . . 8 . . 8 6 6 1 9 9 9 8 . . . 
+        . . . . . . . 8 8 8 6 9 9 1 1 9 9 8 . . 
+        . . 8 . 8 8 8 6 8 6 6 9 9 9 1 1 9 8 8 . 
+        . . . . . . 8 8 6 9 9 9 9 9 9 1 1 9 9 8 
+        . . . . 8 8 9 8 6 9 9 9 9 9 9 1 1 1 9 8 
+        8 8 8 8 8 6 6 8 6 6 9 9 9 9 9 9 1 1 9 8 
+        . . . 8 6 9 9 8 1 6 9 9 9 9 9 9 1 1 9 8 
+        . 8 8 8 8 6 8 8 1 6 6 9 9 9 9 1 1 9 9 8 
+        . . . . . 8 6 9 8 1 6 6 9 9 1 1 9 1 8 . 
+        . . . 8 8 6 8 8 6 8 6 9 6 6 6 1 1 8 . . 
+        . . . . . . 6 6 8 8 8 6 1 6 1 6 8 . . . 
+        . . 8 . 8 8 . 8 6 8 8 8 8 8 8 8 8 . . . 
+        . . . . . . 8 . . . 8 . 8 8 8 . . . . . 
+        `, 75, 0)
+    tiles.placeOnTile(palla_di_fuoco_2, tiles.getTileLocation(0, 23))
 })
 game.onUpdateInterval(1000, function () {
     palla_di_fuoco_3 = sprites.createProjectileFromSide(img`
