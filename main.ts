@@ -201,6 +201,7 @@ for (let value of tiles.getTilesByType(assets.tile`tile4`)) {
         `, SpriteKind.Princess)
     tiles.placeOnTile(mySprite2, value)
     tiles.setTileAt(value, assets.tile`transparency16`)
+    game.splash("testtesttest")
 }
 game.onUpdateInterval(1000, function () {
     palla_di_fuoco_4 = sprites.createProjectileFromSide(img`
